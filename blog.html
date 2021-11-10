@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script type="text/x-mathjax-config">
- 		 MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-		</script>
-		<script type="text/javascript" async
-  		src="https://example.com/mathjax/MathJax.js?config=TeX-AMS_CHTML">
-		</script>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 		<title>Florian Gruen</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
+	
+	
 	<body>
-		When $a \ne 0$,
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
