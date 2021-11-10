@@ -42,7 +42,7 @@ Here we will take a look at a special cousin, the Thomae function, i.e. a functi
 \end{equation*}
 That is, for $x$ being a rational number, $f(x)$ is the the reciprocal of the denominator in the canonical form of the rational number (e.g. $f(3/8) = 1/8$, $f(2/4) (=f(1/2)) = 1/2$).\\
 <br>
-			<br>
+
 			<h4>Step 1: $f$ is discontinuous on $\mathbb{Q}\cap (0,1)$}</h4>
 Let $x_r$ be an arbitrary rational number in $(0,1)$
 We argue by contradiction and suppose thus that $f$ is continuous at $x_r$, namely for all $\epsilon > 0 $ there exists $\delta>0$ such that
@@ -58,8 +58,8 @@ This in turn leads to the contradiction
 \begin{equation*}
     a \in (x_r- \delta, x_r+\delta) \implies |f(a)- f(x_r)| = |0-\frac{1}{q}| = \frac{1}{q} < \frac{1}{2q} \text{, where } q \in \mathbb{N}
 \end{equation*}
-\\
 
+<br>
 <h4>{Step 2: $f$ is continuous on $(\mathbb{R} \backslash \mathbb{Q})\cap (0,1)$} </h4>
 Roughly speaking the idea is to show that all numbers "close" to an irrational number $x_{ir}$ are not nice fractions like $\frac{3}{4}$ but fractions with large numerator/denominator like $\frac{3456}{4567}$ which results in a small function value. \\
 Fix now $\epsilon>0$ and choose $q_0\in \mathbb{N}$ such that $\frac{1}{q_0}< \epsilon$.
@@ -78,7 +78,7 @@ Now construct the interval $I = (x_{ir}-\delta,x_{ir}+\delta)$ and by constructi
 \begin{equation*}
     \text{If }|x_{ir}-x|<\delta \implies |f(x_{ir})-f(x)| = f(x) < \frac{1}{q_0} < \epsilon
 \end{equation*}
-
+<br>
 <h4>\textbf{Step 3: Riemann integrability} </h4>
 By Lebesgue's criterion for integrability $f$ is Riemann integrable if and only if $f$ is continuous almost everywhere (here continuous on all irrationals). Can we find upper and lower sums that converge to the same limit? \\
 Because for any partition $\mathcal{P}_n = \{a_i\}_{i=0}^n$ each interval of the form $[a_{i-1},a_i], 1\leq i \leq n$  contains an irrational number, the lower sum is clearly $0$, the same as the value of the Lebesgue integral $\int_{(0,)]} f(x) d\lambda=0$. \\
