@@ -30,7 +30,7 @@ MathJax = {
 		</nav>
 		<div class="container">
     		<div class="blurb">
-			<h3>Tomae function</h3>
+			<h2>Tomae function</h2>
 Surely most people have heard of the Dirichlet function, the characteristic function of the rational numbers on the interval $[0,1]$. Often it is encountered as an example of a function that is not Riemann integrable.  \\
 
 Here we will take a look at a special cousin, the Thomae function, i.e. a function that is discontinuous on the rational numbers but continuous on the irrationals (the Dirichlet function was discontinuous on the irrationals as well). $f: (0,1) \rightarrow \mathbb{R}$ is defined as\\
@@ -41,8 +41,9 @@ Here we will take a look at a special cousin, the Thomae function, i.e. a functi
     \end{cases}
 \end{equation*}
 That is, for $x$ being a rational number, $f(x)$ is the the reciprocal of the denominator in the canonical form of the rational number (e.g. $f(3/8) = 1/8$, $f(2/4) (=f(1/2)) = 1/2$).\\
-
-\textbf{Step 1: $f$ is discontinuous on $\mathbb{Q}\cap (0,1)$}\\
+<br>
+			<br>
+			<h4>Step 1: $f$ is discontinuous on $\mathbb{Q}\cap (0,1)$}</h4>
 Let $x_r$ be an arbitrary rational number in $(0,1)$
 We argue by contradiction and suppose thus that $f$ is continuous at $x_r$, namely for all $\epsilon > 0 $ there exists $\delta>0$ such that
 \begin{equation*}
@@ -59,7 +60,7 @@ This in turn leads to the contradiction
 \end{equation*}
 \\
 
-\textbf{Step 2: $f$ is continuous on $(\mathbb{R} \backslash \mathbb{Q})\cap (0,1)$}
+<h4>{Step 2: $f$ is continuous on $(\mathbb{R} \backslash \mathbb{Q})\cap (0,1)$} </h4>
 Roughly speaking the idea is to show that all numbers "close" to an irrational number $x_{ir}$ are not nice fractions like $\frac{3}{4}$ but fractions with large numerator/denominator like $\frac{3456}{4567}$ which results in a small function value. \\
 Fix now $\epsilon>0$ and choose $q_0\in \mathbb{N}$ such that $\frac{1}{q_0}< \epsilon$.
 Consider now all natural numbers up to $q_0$ and their reciprocals $\frac{1}{k}$ for $k=1,...,q_0$.
@@ -78,7 +79,7 @@ Now construct the interval $I = (x_{ir}-\delta,x_{ir}+\delta)$ and by constructi
     \text{If }|x_{ir}-x|<\delta \implies |f(x_{ir})-f(x)| = f(x) < \frac{1}{q_0} < \epsilon
 \end{equation*}
 
-\textbf{Step 3: Riemann integrability}
+<h4>\textbf{Step 3: Riemann integrability} </h4>
 By Lebesgue's criterion for integrability $f$ is Riemann integrable if and only if $f$ is continuous almost everywhere (here continuous on all irrationals). Can we find upper and lower sums that converge to the same limit? \\
 Because for any partition $\mathcal{P}_n = \{a_i\}_{i=0}^n$ each interval of the form $[a_{i-1},a_i], 1\leq i \leq n$  contains an irrational number, the lower sum is clearly $0$, the same as the value of the Lebesgue integral $\int_{(0,)]} f(x) d\lambda=0$. \\
 What we want to find now is a partition $\mathcal{P}_n=\{a_i\}_{i=0}^n$ such that the upper sum can be made arbitrarily small, i.e. 
