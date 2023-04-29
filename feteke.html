@@ -47,19 +47,20 @@ $a_{k+j}\leq a_k + a_j$ for any $k,j\in \mathbb{N}$. Then $ \lim_n \frac{a_n}{n}
           <h3> Proof </h3>
       Set $L=\inf_n \frac{a_n}{n}$, which always exists. It remains to show that $\lim_n \frac{a_n}{n}=L$. 
           <br>
-          \textbf{Case 1:} Suppose $L \neq -\infty$. Let $\eps>0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m}<L+\eps$. Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)=n-\lfloor\frac{n}{m}\rfloor m<m$. Then
+			<h4> Case 1:</h4>
+			Suppose $L \neq -\infty$. Let $\varepsilon>0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m}<L+\varepsilon$. Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)=n-\lfloor\frac{n}{m}\rfloor m<m$. Then
 \begin{equation*}
     a_n= a_{qm+r} = a_{m+...+m+r} \leq a_m + ... + a_m + a_r \leq q a_m + b,
 \end{equation*}
 where the subadditivity was used $q+1$ times in the first inequality and the upper bound $b$ in the second.
 Divide now by $n$,
 \begin{equation*}
-    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q (L+\eps)m +b}{n} = \frac{q (L+\eps)m}{n} + \frac{b}{n}. 
+    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q (L+\varepsilon)m +b}{n} = \frac{q (L+\varepsilon)m}{n} + \frac{b}{n}. 
 \end{equation*}
-When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero. Moreover, since $q = \lfloor\frac{n}{m}\rfloor$, $\frac{q m}{ n} = \frac{\lfloor\frac{n}{m}\rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n}\leq L+\eps$ and since $\eps$ was arbitrary, the result follows. \\
+When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero. Moreover, since $q = \lfloor\frac{n}{m}\rfloor$, $\frac{q m}{ n} = \frac{\lfloor\frac{n}{m}\rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n}\leq L+\varepsilon$ and since $\varepsilon$ was arbitrary, the result follows. \\
 
                                                    <br>
-        \textbf{Case 2:} Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. As above,
+        <h4> Case 2:</h4> Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. As above,
 \begin{equation*}
     \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q Mm +b}{n} = \frac{q Mm}{n} + \frac{b}{n},
 \end{equation*}
