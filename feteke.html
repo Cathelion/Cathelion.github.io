@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+		<title>Florian Gruen</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	
+	
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+        		<li><a href="/research">Research</a></li>
+			<li><a href="/blog">Blog</a></li>
+        		<li><a href="/cv">CV</a></li>
+    		</ul>
+		</nav>
+		<br>
+		<div class="container">
+    		<div class="blurb">
+			<h2>Feteke's Lemma</h2>
+        Recently I have come across Feteke's Lemma, a useful tool in elementary analysis. We used it to show that subexponential groups are amenable, but there are many different applications.
+    	<br>
+          <br>
+          <h3> Lemma </h3>
+      Let $a_n, n\in \mathbb{N}$ be a subadditive sequence of real numbers, i.e.
+$a_{k+j}\leq a_k + a_j$ for any $k,j\in \mathbb{N}$. Then $ \lim_n \frac{a_n}{n}=\inf_n \frac{a_n}{n}$, where the infimum is possibly $-\infty$.
+      <br>
+         <br>
+          Morally speaking, subadditivity means that the sequence $a_n$ can not grow too quickly, i.e. not superlinear. Examples are the sequences $a_n= \sqrt{n}$ or $a_n\ln{n+1}$, for linear sequences $a_n =Cn$ equality holds. The sequence $a_n = n^2$ is obviously not subadditive, however $a_n=-n^2$ is. One can easily imagine how playing around with the natural logarithm and the size of a subexponential group gives a subadditive sequence...
+      <br>
+      <br>
+          <h3> Proof </h3>
+      Set $L=\inf_n \frac{a_n}{n}$, which always exists. It remains to show that $\lim_n \frac{a_n}{n}=L$. 
+          <br>
+          \textbf{Case 1:} Suppose $L \neq -\infty$. Let $\eps>0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m}<L+\eps$. Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)=n-\lfloor\frac{n}{m}\rfloor m<m$. Then
+\begin{equation*}
+    a_n= a_{qm+r} = a_{m+...+m+r} \leq a_m + ... + a_m + a_r \leq q a_m + b,
+\end{equation*}
+where the subadditivity was used $q+1$ times in the first inequality and the upper bound $b$ in the second.
+Divide now by $n$,
+\begin{equation*}
+    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q (L+\eps)m +b}{n} = \frac{q (L+\eps)m}{n} + \frac{b}{n}. 
+\end{equation*}
+When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero. Moreover, since $q = \lfloor\frac{n}{m}\rfloor$, $\frac{q m}{ n} = \frac{\lfloor\frac{n}{m}\rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n}\leq L+\eps$ and since $\eps$ was arbitrary, the result follows. \\
+
+                                                   <br>
+        \textbf{Case 2:} Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. As above,
+\begin{equation*}
+    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q Mm +b}{n} = \frac{q Mm}{n} + \frac{b}{n},
+\end{equation*}
+so passing to the limit gives $\lim_n \frac{a_n}{n}\leq M$ and since $M$ can be taken arbitrarily small, $\lim_n \frac{a_n}{n} = -\infty $.
+      
+      </div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:flo.gruen.fds@gmail.com">email</a></li>
+        		<li><a href="https://github.com/Cathelion">github.com/Cathelion</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
