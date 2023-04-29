@@ -33,7 +33,7 @@ MathJax = {
 		<div class="container">
     		<div class="blurb">
 			<h2>Feteke's Lemma</h2>
-        Recently I have come across Feteke's Lemma, a useful tool in elementary analysis. We used it to show that subexponential groups are amenable, but there are many different applications.
+        Recently I have come across Feteke's Lemma, a useful tool in elementary analysis. <br> We used it to show that subexponential groups are amenable, but there are many different applications.
     	<br>
           <br>
           <h3> Lemma </h3>
@@ -41,29 +41,36 @@ MathJax = {
 $a_{k+j}\leq a_k + a_j$ for any $k,j\in \mathbb{N}$. Then $ \lim_n \frac{a_n}{n}=\inf_n \frac{a_n}{n}$, where the infimum is possibly $-\infty$.
       <br>
          <br>
-          Morally speaking, subadditivity means that the sequence $a_n$ can not grow too quickly, i.e. not superlinear. Examples are the sequences $a_n= \sqrt{n}$ or $a_n\ln{n+1}$, for linear sequences $a_n =Cn$ equality holds. The sequence $a_n = n^2$ is obviously not subadditive, however $a_n=-n^2$ is. One can easily imagine how playing around with the natural logarithm and the size of a subexponential group gives a subadditive sequence...
+          Morally speaking, subadditivity means that the sequence $a_n$ can not grow too quickly, i.e. not superlinear. <br>
+	Examples are the sequences $a_n= \sqrt{n}$ or $a_n\ln{n+1}$, for linear sequences $a_n =Cn$ equality holds. <br>
+The sequence $a_n = n^2$ is obviously not subadditive, however $a_n=-n^2$ is.<br>
+	One can easily imagine how playing around with the natural logarithm and the size of a subexponential group gives a subadditive sequence...
       <br>
       <br>
           <h3> Proof </h3>
       Set $L=\inf_n \frac{a_n}{n}$, which always exists. It remains to show that $\lim_n \frac{a_n}{n}=L$. 
           <br>
 			<h4> Case 1:</h4>
-			Suppose $L \neq -\infty$. Let $\varepsilon > 0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m} < L + \varepsilon $.
-	Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. 
-	Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)= n- \lfloor \frac{n}{m} \rfloor m < m$. Then
+			Suppose $L \neq -\infty$. Let $\varepsilon > 0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m} < L + \varepsilon $.<br>
+	Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. <br>
+	Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)= n- \lfloor \frac{n}{m} \rfloor m < m$. <br>
+	Then
 \begin{equation*}
     a_n= a_{qm+r} = a_{m+...+m+r} \leq a_m + ... + a_m + a_r \leq q a_m + b,
 \end{equation*}
-where the subadditivity was used $q+1$ times in the first inequality and the upper bound $b$ in the second.
+where the subadditivity was used $q+1$ times in the first inequality and the upper bound $b$ in the second.<br>
 Divide now by $n$,
 \begin{equation*}
     \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q (L+\varepsilon)m +b}{n} = \frac{q (L+\varepsilon)m}{n} + \frac{b}{n}. 
 \end{equation*}
-When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero.
-Moreover, since $q = \lfloor \frac{n}{m} \rfloor$, $\frac{q m}{ n} = \frac{ \lfloor \frac{n}{m} \rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n} \leq L + \varepsilon $ and since $\varepsilon$ was arbitrary, the result follows. \\
+When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero.<br>
+Moreover, since $q = \lfloor \frac{n}{m} \rfloor$, $\frac{q m}{ n} = \frac{ \lfloor \frac{n}{m} \rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n} \leq L + \varepsilon $. <br>
+			Since $\varepsilon$ was arbitrary, the result follows. 
 
                                                    <br>
-        <h4> Case 2:</h4> Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. As above,
+        <h4> Case 2:</h4> Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. <br>
+			Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. <br>
+			As above,
 \begin{equation*}
     \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q Mm +b}{n} = \frac{q Mm}{n} + \frac{b}{n},
 \end{equation*}
