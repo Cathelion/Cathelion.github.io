@@ -65,10 +65,11 @@ There is a very powerful theorem (which we will not prove) that elliptic isometr
 <h3> Problem 1 </h3>
 <h4>Let $g,h \in Isom(X)$ commute and elliptic. Then there exists a common fixed point. </h4> <br>
 
-Since $g,h$ are elliptic, there exists $x_0,x_1$ (not necessarily equal!) such that $gx_0=x_0$ and $hx_1 = x_1$. We want to show that there exists $z\in X$ such that $gz=z=hz$.
-We set $A=\langle g, h \rangle = \{g^n h^m: n,m\in \mathbb{Z}\}$. 
-Thus we have the equivalence: \textit{$A$ fixes a point $z\in X$ $\Longleftrightarrow$ $gz=z$ and $hz =z$}. \\
-By the fixed point theorem: \textit{$A$ fixes a point $\Longleftrightarrow$ $A$ has a bounded orbit in $X$.}
+Since $g,h$ are elliptic, there exists $x_0,x_1$ (not necessarily equal!) such that $gx_0=x_0$ and $hx_1 = x_1$. <br>
+We want to show that there exists $z\in X$ such that $gz=z=hz$.<br>
+We set $A=\langle g, h \rangle = \{g^n h^m: n,m\in \mathbb{Z}\}$. <br>
+Thus we have the equivalence: $A$ fixes a point $z\in X$ $\Longleftrightarrow$ $gz=z$ and $hz =z$.<br>
+By the well known fixed point theorem: $A$ fixes a point $\Longleftrightarrow$ $A$ has a bounded orbit in $X$.<br> 
 
 It suffices to show that the orbit $A x_1$ is bounded. Take $a\in A$, since $g$ and $h$ commute, without loss of generality, we can write $a=g^n h^m$ for some $n,m \in \mathbb{Z}$. Now
 \begin{equation*}
@@ -77,7 +78,8 @@ It suffices to show that the orbit $A x_1$ is bounded. Take $a\in A$, since $g$ 
         &= d(g^nh^m x_1,g^n x_0) + d(x_0,x_1) = d(h^m x_1, x_0) + d(x_0,x_1) = d(x_1, x_0) + d(x_0,x_1) = 2d(x_0,x_1), 
     \end{split}
 \end{equation*}
-where we use the triangle inequality, the fact that $g^n$ is an isometry in the 4th equality and $x_0,x_1$ are fixed points for $g^n$ and $h^m$ in the 3rd and 5th equality. Hence the orbit $Ax_1$ is bounded, by interchanging $g,h$ and $x_0,x_1$ respectively, the orbit $Ax_0$ is bounded as well. 
+where we use the triangle inequality, the fact that $g^n$ is an isometry in the 4th equality and $x_0,x_1$ are fixed points for $g^n$ and $h^m$ in the 3rd and 5th equality. <br>
+Hence the orbit $Ax_1$ is bounded, by interchanging $g,h$ and $x_0,x_1$ respectively, the orbit $Ax_0$ is bounded as well. <br>
 
 
 
@@ -85,14 +87,18 @@ where we use the triangle inequality, the fact that $g^n$ is an isometry in the 
 			<br>
 <h3> Problem 2 </h3>
 <h4>Let $g,h \in Isom(X)$ commute and hyperbolic. Then there exists a common fixed point in $\partial X$.</h4> <br>
-We can think of points in $\partial X$ as rays in $X$, quotiented out by the equivalence relation $\sim$ as defined in the lectures (i.e. $\sigma \sim \tau$ if $\sup_t(\sigma(t),\tau(t))<\infty$). To prove the statement we want to show existence of a ray $\gamma$ such that $\gamma \sim g \gamma$ and $\gamma \sim h \gamma$, i.e. $\sup_t d(g \gamma(t), \gamma(t))<\infty$ and $\sup_t d(h \gamma(t), \gamma(t))<\infty$.
-
-\underline{Claim:} We can take $\gamma:[0,\infty) \rightarrow X$ defined as $\gamma(t) := \sigma(t)$, where $\sigma$ is the invariant geodesic of $g$ (that exists, since $g$ is hyperbolic) with $g\sigma(s) = \sigma(s+|g|)$.\\
-Clearly $g\gamma \sim \gamma$, since $\sup_{t\geq 0} d(g\gamma(t), \gamma(t))=\sup_{t\geq 0} d(g\sigma(t), \sigma(t)) = d(\gamma(t+|g|),\gamma(t)) = |g|\leq \infty$. It remains to show that $h \gamma \sim \gamma$. Using that $g^k$ is an isometry for $k \in \mathbb{N}$, we note 
+We can think of points in $\partial X$ as rays in $X$, quotiented out by the equivalence relation $\sim$ (i.e. $\sigma \sim \tau$ if $\sup_t(\sigma(t),\tau(t))<\infty$). <br>
+To prove the statement we want to show existence of a ray $\gamma$ such that $\gamma \sim g \gamma$ and $\gamma \sim h \gamma$, i.e. $\sup_t d(g \gamma(t), \gamma(t))<\infty$ and $\sup_t d(h \gamma(t), \gamma(t))<\infty$. <br>
+<br>
+<h5>Claim: </h5> We can take $\gamma:[0,\infty) \rightarrow X$ defined as $\gamma(t) := \sigma(t)$, where $\sigma$ is the invariant geodesic of $g$ (that exists, since $g$ is hyperbolic) with $g\sigma(s) = \sigma(s+|g|)$.<br>
+Clearly $g\gamma \sim \gamma$, since $\sup_{t\geq 0} d(g\gamma(t), \gamma(t))=\sup_{t\geq 0} d(g\sigma(t), \sigma(t)) = d(\gamma(t+|g|),\gamma(t)) = |g|\leq \infty$. It remains to show that $h \gamma \sim \gamma$. <br>
+	Using that $g^k$ is an isometry for $k \in \mathbb{N}$, we note 
 \begin{equation*}
     d(\gamma(0), h \gamma(0)) =d(\sigma(0), h \sigma(0))=d(g^k\sigma(0), g^kh \sigma(0)) = d(g^k\sigma(0), hg^k \sigma(0)) = d(\sigma(k|g|), h \sigma(k|g|)) \quad \forall k\in \mathbb{N}.  
 \end{equation*}
-We now lift the result that the distance stays constant for points of the form $t=|g|\mathbb{N}$ to all positive $t$. Let $M:= \max_{t\in [0,|g|]}d(\sigma(t),h \sigma(t))$, which is finite, since $[0,|g|]$ is compact and $d(\cdot,\cdot)$ continuous. Thus for any $t\geq0$, $d(\sigma(t), h\sigma(t))\leq M$, since $t=N |g|+ t'$ with $t'\in [0,|g|]$ and $N \in \mathbb{N}$. 
+We now lift the result that the distance stays constant for points of the form $t=|g|\mathbb{N}$ to all positive $t$.<br>
+	Let $M:= \max_{t\in [0,|g|]}d(\sigma(t),h \sigma(t))$, which is finite, since $[0,|g|]$ is compact and $d(\cdot,\cdot)$ continuous. <br>
+	Thus for any $t\geq0$, $d(\sigma(t), h\sigma(t))\leq M$, since $t=N |g|+ t'$ with $t'\in [0,|g|]$ and $N \in \mathbb{N}$. 
 
 
 			
