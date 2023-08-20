@@ -47,12 +47,14 @@ tells that the midpoint lies somehow closer to any $z$ than its average distance
 <br>
 <br>
 <h3> Definition </h3>
-A map $f:X \rightarrow X$ is called an isometry if for any $x,y\in X$ we have $d(x,y)=d(f(x),f(y))$.
-\begin{equation*}
-\forall x \quad \forall y \quad \exists m \text{ such that } \forall z: \frac{d^2(x,z) + d^2(y,z)}{2}- \frac{d^2(x,y)}{4} \geq d^2(z,m). 
-\end{equation*}
-It is not difficult to show that $m$ is the (unique) midpoint of $x$ and $y$, i.e. $2d(x,m)=2d(y,m)=d(x,y)$. In other words the inequality 
-tells that the midpoint lies somehow closer to any $z$ than its average distance to the two endpoints. 
+A map $f:X \rightarrow X$ is called an isometry if for any $x,y\in X$ we have $d(x,y)=d(f(x),f(y))$. <br>
+We now define the norm of an isometry $f$ as $|f|:= \inf_{x \in X} d(f(x),x)$.
+			<br>
+<br>
+<h3> Definition </h3>
+When the infimum is not attained, the isometry is called parabolic, those are usually more difficult to deal with.
+If the infimum is attained and $|f|=0$, then the isometry is called elliptic, if $|f|>0$, then hyperbolic.
+There is a very powerful theorem (which we will not prove) that elliptic isometries fix a point and hyperbolic isometries fix a geodesic.	
 <br>
 <br>
 			
