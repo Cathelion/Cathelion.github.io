@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+		<title>Florian Gruen</title>
+		<!-- link to main stylesheet -->
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+	</head>
+	
+	
+	<body>
+		<nav>
+    		<ul>
+        		<li><a href="/">Home</a></li>
+        		<li><a href="/research">Research</a></li>
+			<li><a href="/blog">Blog</a></li>
+        		<li><a href="/cv">CV</a></li>
+    		</ul>
+		</nav>
+		<br>
+		<div class="container">
+    		<div class="blurb">
+			<h2>Isometries in CAT(0) spaces</h2>
+        In connection with a course on metric geometry, I came across two interesting exercises about isometries in CAT(0) spaces. 
+CAT(0) spaces are essentially generalization of manifolds with non-positive curvature, but without invoking any smoothness or curvature explicitely. <br> 
+          <br>
+
+<h3> Definition >/h3>
+We say a (complete) metric space $(X,d)$ is a CAT(0) space if the following holds:
+\begin{equation*}
+\forall x \quad \forall y \quad \exists m \text{ such that } \forall z: \frac{d^2(x,z) + d^2(y,z)}{2}- \frac{d^2(x,y)}{4} \geq d^2(z,m). 
+\end{equation*}
+It is not difficult to show that $m$ is the (unique) midpoint of $x$ and $y$, i.e. $2d(x,m)=2d(y,m)=d(x,y)$. In other words the inequality 
+tells that the midpoint lies somehow closer to any $z$ than its average distance to the two endpoints. 
+<br>
+<br>
+
+          <h3> Lemma </h3>
+      Let $a_n, n\in \mathbb{N}$ be a subadditive sequence of real numbers, i.e.
+$a_{k+j}\leq a_k + a_j$ for any $k,j\in \mathbb{N}$. Then $ \lim_n \frac{a_n}{n}=\inf_n \frac{a_n}{n}$, where the infimum is possibly $-\infty$.
+      <br>
+         <br>
+          Morally speaking, subadditivity means that the sequence $a_n$ can not grow too quickly, i.e. not superlinear. <br>
+	Examples are the sequences $a_n= \sqrt{n}$ or $a_n\ln{n+1}$, for linear sequences $a_n =Cn$ equality holds. <br>
+The sequence $a_n = n^2$ is obviously not subadditive, however $a_n=-n^2$ is.<br>
+	One can easily imagine how playing around with the natural logarithm and the size of a subexponential group gives a subadditive sequence...
+      <br>
+      <br>
+          <h3> Proof </h3>
+      Set $L=\inf_n \frac{a_n}{n}$, which always exists. It remains to show that $\lim_n \frac{a_n}{n}=L$. 
+          <br>
+			<h4> Case 1:</h4>
+			Suppose $L \neq -\infty$. Let $\varepsilon > 0$  and take $m\in \mathbb{N}$ such that $\frac{a_m}{m} < L + \varepsilon $.<br>
+	Now fix the constant $b:= \max_{i=1,...,m} a_i$ and consider $n\geq m$. <br>
+	Write $n=mq+r$ for $q=q(n)=\lfloor\frac{n}{m}\rfloor \in \mathbb{N}$ and $r=r(n)= n- \lfloor \frac{n}{m} \rfloor m < m$. <br>
+	Then
+\begin{equation*}
+    a_n= a_{qm+r} = a_{m+...+m+r} \leq a_m + ... + a_m + a_r \leq q a_m + b,
+\end{equation*}
+where the subadditivity was used $q+1$ times in the first inequality and the upper bound $b$ in the second.<br>
+Divide now by $n$,
+\begin{equation*}
+    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q (L+\varepsilon)m +b}{n} = \frac{q (L+\varepsilon)m}{n} + \frac{b}{n}. 
+\end{equation*}
+When passing to the limit $n \rightarrow \infty$, the second term $\frac{b}{n}$ converges to zero.<br>
+Moreover, since $q = \lfloor \frac{n}{m} \rfloor$, $\frac{q m}{ n} = \frac{ \lfloor \frac{n}{m} \rfloor m}{n} \rightarrow 1$ and thus $\lim_n \frac{a_n}{n} \leq L + \varepsilon $. <br>
+			Since $\varepsilon$ was arbitrary, the result follows. 
+
+                                                   <br>
+        <h4> Case 2:</h4> Suppose $L=-\infty$.  Let $M$ be arbitrary, then there exists $m$ such that $\frac{a_m}{m} < M$. <br>
+			Again $b:= \max_{i=1,...,m} a_i$ and $n=mq+r$. <br>
+			As above,
+\begin{equation*}
+    \frac{a_n}{n} \leq \frac{q a_m +b}{n} < \frac{q Mm +b}{n} = \frac{q Mm}{n} + \frac{b}{n},
+\end{equation*}
+so passing to the limit gives $\lim_n \frac{a_n}{n}\leq M$ and since $M$ can be taken arbitrarily small, $\lim_n \frac{a_n}{n} = -\infty $.
+      
+      </div><!-- /.blurb -->
+		</div><!-- /.container -->
+		<footer>
+    		<ul>
+        		<li><a href="mailto:flo.gruen.fds@gmail.com">email</a></li>
+        		<li><a href="https://github.com/Cathelion">github.com/Cathelion</a></li>
+			</ul>
+		</footer>
+	</body>
+</html>
