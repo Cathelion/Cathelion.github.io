@@ -37,7 +37,7 @@ MathJax = {
 CAT(0) spaces are essentially generalization of manifolds with non-positive curvature, but without invoking any smoothness or curvature explicitely. <br> 
           <br>
 
-<h3> Definition >/h3>
+<h3> Definition </h3>
 We say a (complete) metric space $(X,d)$ is a CAT(0) space if the following holds:
 \begin{equation*}
 \forall x \quad \forall y \quad \exists m \text{ such that } \forall z: \frac{d^2(x,z) + d^2(y,z)}{2}- \frac{d^2(x,y)}{4} \geq d^2(z,m). 
@@ -46,6 +46,16 @@ It is not difficult to show that $m$ is the (unique) midpoint of $x$ and $y$, i.
 tells that the midpoint lies somehow closer to any $z$ than its average distance to the two endpoints. 
 <br>
 <br>
+<h3> Definition </h3>
+A map $f:X \rightarrow X$ is called an isometry if for any $x,y\in X$ we have $d(x,y)=d(f(x),f(y))$.
+\begin{equation*}
+\forall x \quad \forall y \quad \exists m \text{ such that } \forall z: \frac{d^2(x,z) + d^2(y,z)}{2}- \frac{d^2(x,y)}{4} \geq d^2(z,m). 
+\end{equation*}
+It is not difficult to show that $m$ is the (unique) midpoint of $x$ and $y$, i.e. $2d(x,m)=2d(y,m)=d(x,y)$. In other words the inequality 
+tells that the midpoint lies somehow closer to any $z$ than its average distance to the two endpoints. 
+<br>
+<br>
+			
 
           <h3> Lemma </h3>
       Let $a_n, n\in \mathbb{N}$ be a subadditive sequence of real numbers, i.e.
