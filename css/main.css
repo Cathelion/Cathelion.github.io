@@ -13,7 +13,7 @@ body {
    padding: 20px;
    display: flex;
    flex-direction: column; /* Stack navigation, content, and footer vertically */
-   align-items: center; /* Center items horizontally */
+align-items: flex-start; /* Align content to the top */
 }
 
 nav ul, footer ul {
