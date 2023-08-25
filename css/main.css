@@ -52,3 +52,21 @@ ul.posts li {
 li.right{
     text-align: right;
 }
+
+.container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+      }
+      img {
+        max-width: 100%
+      }
+      .image {
+        flex-basis: 70%;
+        order: 2;
+      }
+      .text {
+        color: #CD5C5C;
+        padding-left: 20px;
+        font: italic 10px "Fira Sans", serif;
+      }
