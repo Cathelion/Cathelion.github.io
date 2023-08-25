@@ -3,12 +3,16 @@ body {
     width: 50%;
     background-color: red; 
 }
+
+nav{
+    background-color: green;
+}
+    
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    background-color: green;
 }
 nav ul li, footer ul li {
     display: inline;
