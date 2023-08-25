@@ -1,7 +1,7 @@
 body {
     margin: 60px auto;
     width: 50%;
-    background-color: red; 
+    background-color: hsl(50 33% 25% / 0.75); 
 }
 
 nav{
