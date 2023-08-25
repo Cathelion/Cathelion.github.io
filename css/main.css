@@ -65,12 +65,12 @@ li.right{
 /* Styling for the first paragraph */
 .blurb {
     flex: 1; /* Take up remaining space */
-    padding-right: 20px; /* Add some spacing from the image */
+    padding-right: 50px; /* Add some spacing from the image */
 }
 
 /* Styling for the image and second paragraph */
 .img {
     background-color: green;
-    padding: 20px; /* Add spacing around the image */
+    padding: 50px; /* Add spacing around the image */
     flex: 0; /* Don't grow, fixed width based on content */
 }
