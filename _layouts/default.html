@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
-		
-		<title>{{ page.title }}</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-        		<li><a href="/research/research.html">Research</a></li>
-			<li><a href="/blog/blog.html">Blog</a></li>
-        		<li><a href="/others/others.html">Others</a></li>
-    		</ul>
-		</nav>
-		<br>
-		<div class="container">
-          {{ content }}
-		</div><!-- /.container -->
-		<footer>
-			<br>
-			<hr>
-    		<ul>
-        		<li><a href="mailto:florian.grun@epfl.ch">email</a></li>
-        		<li><a href="https://github.com/Cathelion">github.com/Cathelion</a></li>
-			</ul>
-		</footer>
-	</body>
+<head>
+   <script>
+      MathJax = {
+         tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+         },
+         svg: {
+            fontCache: 'global'
+         }
+      };
+   </script>
+   <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+   <title>{{ page.title }}</title>
+   <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+   <div class="main-wrapper">
+      <nav>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/research/research.html">Research</a></li>
+            <li><a href="/blog/blog.html">Blog</a></li>
+            <li><a href="/others/others.html">Others</a></li>
+         </ul>
+      </nav>
+      <br>
+      <div class="container">
+         <!-- This is the main content part -->
+         {{ content }}
+      </div>
+      <footer>
+         <br>
+         <hr>
+         <ul>
+            <li><a href="mailto:florian.grun@epfl.ch">email</a></li>
+            <li><a href="https://github.com/Cathelion">github.com/Cathelion</a></li>
+         </ul>
+      </footer>
+   </div>
+</body>
 </html>
