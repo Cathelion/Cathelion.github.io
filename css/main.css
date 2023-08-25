@@ -1,6 +1,6 @@
 body {
    margin: 0;
-   background-color: hsl(50 33% 25% / 0.25); 
+   background-color: hsl(50 33% 25% / 0.15); 
    display: flex;
    justify-content: center;
    align-items: center;
@@ -9,7 +9,7 @@ body {
 
 .main-wrapper {
    width: 50%;
-   background-color: red;
+   background-color: hsl(50 33% 25% / 0.35);
    padding: 20px;
    display: flex;
    flex-direction: column; /* Stack navigation, content, and footer vertically */
@@ -54,6 +54,7 @@ p {
     color: #333;
 }
 footer {
+   width: 50%;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
 }
