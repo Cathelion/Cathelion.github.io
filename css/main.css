@@ -52,3 +52,8 @@ ul.posts li {
 li.right{
     text-align: right;
 }
+
+div {
+  display: flex;
+  align-items: center;
+}
