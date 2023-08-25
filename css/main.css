@@ -35,6 +35,12 @@ a {
     text-decoration: none;
     color: #1016f3;
 }
+
+a.insidep {
+    text-decoration: none;
+    color: #1016f3;
+}
+
 a:hover {
     text-decoration: underline;
 }
