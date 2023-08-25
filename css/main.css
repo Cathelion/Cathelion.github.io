@@ -8,6 +8,7 @@ body {
 }
 
 .main-wrapper {
+   font-size: 1.5em;
    width: 50%;
    height: 100vh; /* Make the wrapper stretch from top to bottom */
    background-color: hsl(50 33% 25% / 0.35);
@@ -32,7 +33,6 @@ nav ul li, footer ul li {
 
 
 a {
-    font-size: 1.5em;
     text-decoration: none;
     color: #1016f3;
 }
@@ -50,7 +50,6 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 p {
-    font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
 }
