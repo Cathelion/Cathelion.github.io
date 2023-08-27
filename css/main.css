@@ -102,6 +102,7 @@ li.right{
    flex-direction: column;
    align-items: flex-start; /* Align content to the left */
    margin-top: 20px; /* Add some spacing between image and paragraph */
+   padding:50px;
 }
 
 .img-container2 {
@@ -111,6 +112,7 @@ li.right{
    flex-direction: column;
    align-items: flex-start; /* Align content to the left */
    margin-top: 20px; /* Add some spacing between image and paragraph */
+   padding:50px;
 }
 
 
