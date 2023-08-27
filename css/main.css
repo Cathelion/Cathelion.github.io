@@ -10,7 +10,7 @@ body {
 .main-wrapper {
    font-size: 1.5em;
    width: 50%;
-   height: 100vh; /* Make the wrapper stretch from top to bottom */
+   min-height: 100vh; /* Make the wrapper stretch from top to bottom */
    background-color: hsl(50 33% 25% / 0.35);
    padding: 20px;
    display: flex;
