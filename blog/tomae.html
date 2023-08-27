@@ -7,16 +7,17 @@ title: Tomae function
 	
     		<div class="blurb">
 			<h2>Tomae function</h2>
-Surely most people have heard of the Dirichlet function, the characteristic function of the rational numbers on the interval $[0,1]$. Often it is encountered as an example of a function that is not Riemann integrable.  \\
+Surely most people have heard of the Dirichlet function, the characteristic function of the rational numbers on the interval $[0,1]$. Often it is encountered as an example of a function that is not Riemann integrable.  <br>
 
-Here we will take a look at a special cousin, the Thomae function, i.e. a function that is discontinuous on the rational numbers but continuous on the irrationals (the Dirichlet function was discontinuous on the irrationals as well). $f: (0,1) \rightarrow \mathbb{R}$ is defined as\\
+Here we will take a look at a special cousin, the Thomae function, i.e. a function that is discontinuous on the rational numbers but continuous on the irrationals (the Dirichlet function was discontinuous on the irrationals as well). <br>
+The function $f: (0,1) \rightarrow \mathbb{R}$ is defined as 
 \begin{equation*}
     f(x)= \begin{cases}
     \frac{1}{q} \quad \text{ if } x=\frac{p}{q} \quad p,q \in \mathbb{N} \text{ and } gcd(p,q)=1 \\
     0 \quad \text{ if $x$ is irrational}
     \end{cases}
 \end{equation*}
-That is, for $x$ being a rational number, $f(x)$ is the the reciprocal of the denominator in the canonical form of the rational number (e.g. $f(3/8) = 1/8$, $f(2/4) (=f(1/2)) = 1/2$).\\
+That is, for $x$ being a rational number, $f(x)$ is the the reciprocal of the denominator in the canonical form of the rational number (e.g. $f(3/8) = 1/8$, $f(2/4) (=f(1/2)) = 1/2$).
 <br>
 <br>
 			<h4>Step 1: $f$ is discontinuous on $\mathbb{Q}\cap (0,1)$</h4>
@@ -29,7 +30,7 @@ In our case $x_r=\frac{p}{q}$ so $f(x_r) = \frac{1}{q},q \in \mathbb{N}$. Choose
 \begin{equation*}
     \text{if } x \in (x_r- \delta, x_r+\delta) \hspace{1cm}\text{ then } |f(x) - f(x_r)| = |f(x)-\frac{1}{q}| < \frac{1}{2q}
 \end{equation*}
-However by the density of the irrational numbers in $\mathbb{R}$, there exists an irrational number $a$ in $(x_r- \delta, x_r+\delta)$ and clearly $f(a)=0$. \\
+However by the density of the irrational numbers in $\mathbb{R}$, there exists an irrational number $a$ in $(x_r- \delta, x_r+\delta)$ and clearly $f(a)=0$. <br>
 This in turn leads to the contradiction
 \begin{equation*}
     a \in (x_r- \delta, x_r+\delta) \implies |f(a)- f(x_r)| = |0-\frac{1}{q}| = \frac{1}{q} < \frac{1}{2q} \text{, where } q \in \mathbb{N}
@@ -37,9 +38,9 @@ This in turn leads to the contradiction
 
 <br>
 <h4>Step 2: $f$ is continuous on $(\mathbb{R} \backslash \mathbb{Q})\cap (0,1)$</h4>
-Roughly speaking the idea is to show that all numbers "close" to an irrational number $x_{ir}$ are not nice fractions like $\frac{3}{4}$ but fractions with large numerator/denominator like $\frac{3456}{4567}$ which results in a small function value. \\
-Fix now $\epsilon>0$ and choose $q_0\in \mathbb{N}$ such that $\frac{1}{q_0}< \epsilon$.
-Consider now all natural numbers up to $q_0$ and their reciprocals $\frac{1}{k}$ for $k=1,...,q_0$.
+Roughly speaking the idea is to show that all numbers "close" to an irrational number $x_{ir}$ are not nice fractions like $\frac{3}{4}$ but fractions with large numerator/denominator like $\frac{3456}{4567}$ which results in a small function value. <br>
+Fix now $\epsilon>0$ and choose $q_0\in \mathbb{N}$ such that $\frac{1}{q_0}< \epsilon$.<br>
+Consider now all natural numbers up to $q_0$ and their reciprocals $\frac{1}{k}$ for $k=1,...,q_0$.<br>
 For each $k$ we can find suitable numerator $n_k$(possibly $0$) such that $x_{ir}$ is squeezed between $\frac{n_k}{k}$ and $\frac{n_k+1}{k}$, i.e.
 \begin{equation*}
     \frac{n_k}{k} < x_0 < \frac{n_k+1}{k} \hspace{1cm} \forall k=1,...,q_0
@@ -48,25 +49,26 @@ Define now the minimal distance $\delta_k$ of $x_{ir}$ to fractions with denomin
 \begin{equation*}
     \delta_k := \min \Big\{ \left|x_{ir}-\frac{n_k}{k}\right| , \left|x_{ir}-\frac{n_k+1}{k} \right| \Big\} \hspace{1cm} \forall k=1,...,q_0
 \end{equation*}
-So for example if $x_{ir}=0.235711...$ we have $\delta_3 = \min \Big\{ \left|x_{ir}-\frac{0}{3}\right| , \left|x_{ir}-\frac{1}{3} \right| \Big\}  \approx 0.0976$.
-Let now $\delta := \min_{1\leq k \leq q_0} \{d_k\}$ which exists as a positive number as there are only finitly many $d_k$.
+So for example if $x_{ir}=0.235711...$ we have $\delta_3 = \min \Big\{ \left|x_{ir}-\frac{0}{3}\right| , \left|x_{ir}-\frac{1}{3} \right| \Big\}  \approx 0.0976$. <br>
+Let now $\delta := \min_{1\leq k \leq q_0} \{d_k\}$ which exists as a positive number as there are only finitly many $d_k$. <br>
 Now construct the interval $I = (x_{ir}-\delta,x_{ir}+\delta)$ and by construction no fraction with denominator less than or equal to $q_0$ will be in $I$. That means all numbers $a$ in $I$ either have a denominator strictly greater than $q_0$ or are irrational, $f(a)$ is less than $\frac{1}{q_0}$ or $f(a)=0$. The following condition for continuity holds.
 \begin{equation*}
     \text{If }|x_{ir}-x|<\delta \implies |f(x_{ir})-f(x)| = f(x) < \frac{1}{q_0} < \epsilon
 \end{equation*}
 <br>
 <h4>Step 3: Riemann integrability </h4>
-By Lebesgue's criterion for integrability $f$ is Riemann integrable if and only if $f$ is continuous almost everywhere (here continuous on all irrationals). Can we find upper and lower sums that converge to the same limit? \\
-Because for any partition $\mathcal{P}_n = \{a_i\}_{i=0}^n$ each interval of the form $[a_{i-1},a_i], 1\leq i \leq n$  contains an irrational number, the lower sum is clearly $0$, the same as the value of the Lebesgue integral $\int_{(0,)]} f(x) d\lambda=0$. \\
+By Lebesgue's criterion for integrability $f$ is Riemann integrable if and only if $f$ is continuous almost everywhere (here continuous on all irrationals). Can we find upper and lower sums that converge to the same limit? <br>
+Because for any partition $\mathcal{P}_n = \{a_i\}_{i=0}^n$ each interval of the form $[a_{i-1},a_i], 1\leq i \leq n$  contains an irrational number, the lower sum is clearly $0$, the same as the value of the Lebesgue integral $\int_{(0,)]} f(x) d\lambda=0$. <br>
 What we want to find now is a partition $\mathcal{P}_n=\{a_i\}_{i=0}^n$ such that the upper sum can be made arbitrarily small, i.e. 
 \begin{equation}
 \label{convergence}
     u(f,\mathcal{P}_n) < \epsilon \hspace{1cm} \text{i.e.} \hspace{1cm} \lim_{n \rightarrow \infty} u(f,\mathcal{P}_n) \rightarrow 0
 \end{equation}
-The construction given here may not be the most elegant or efficient way, but is interesting on its own.\\
-The claim is now that $\mathcal{P}_n=\{ \frac{i}{n} \}_{i=0}^{n}$, an equidistant partition of mesh-size $\frac{1}{n}$ suffices. 
+The construction given here may not be the most elegant or efficient way, but is interesting on its own.<br>
+The claim is now that $\mathcal{P}_n=\{ \frac{i}{n} \}_{i=0}^{n}$, an equidistant partition of mesh-size $\frac{1}{n}$ suffices. <br>
 For a fixed $n$ there are exactly $n$ datapoints to consider, one for each of the $n$ intervals. $f(x)$ however can only take the following function values:  $\frac{1}{2}$ at $x=\frac{1}{2}$, $\frac{1}{3}$ at $x=\frac{1}{3},\frac{2}{3}$,... Then one can argue that the largest $n$ function values can be bounded pointwise by the collection $\{1\times \frac{1}{2}, 2 \times \frac{1}{3}, 3 \times \frac{1}{4},...,k \times \frac{k-1}{k}  \}$ such that $\frac{k(k-1)}{2}\geq n$.
-This makes an estimate for $u(f,\mathcal{P}_n)$ possible. 
+<br>
+	    This makes an estimate for $u(f,\mathcal{P}_n)$ possible. 
 \begin{equation}
 \begin{split}
     u(f,\mathcal{P}_n) &\leq \frac{1}{n} \left( \frac{1}{2}+ \frac{2}{3} + \frac{3}{4} + ... + \frac{k-1}{k} \right) \hspace{1cm} \text{where } \frac{k(k-1)}{2}\geq n \geq \frac{(k-1)(k-2)}{2}\\
@@ -74,7 +76,7 @@ This makes an estimate for $u(f,\mathcal{P}_n)$ possible.
     &= \frac{1}{n}k \leq \frac{2}{(k-1)(k-2)} k  =: g(k)
 \end{split}
 \end{equation}
-We may choose $n$ sufficiently small to begin with, to avoid problems in the denominator of $g(k)$.
+We may choose $n$ sufficiently small to begin with, to avoid problems in the denominator of $g(k)$.<br>
 Letting now $n\rightarrow \infty$ implies that $k \rightarrow \infty$, so the upper bound of $u(f,\mathcal{P}_n)$, namely $g(k)\rightarrow 0$. Thus \eqref{convergence}
 holds, the lower and upper sums get arbitrarily close and $f$ is Riemann integrable by definition.
     		</div><!-- /.blurb -->
