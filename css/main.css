@@ -54,6 +54,7 @@ p {
     color: #333;
 }
 footer {
+         margin-top: 50px; 
    width: 100%;
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -103,6 +104,7 @@ li.right{
    align-items: flex-start; /* Align content to the left */
    margin-top: 50px; /* Add some spacing between image and paragraph */
    margin-right: 50px ;
+      margin-bottom: 20px; 
 }
 
 .img-container2 {
@@ -113,6 +115,8 @@ li.right{
    align-items: flex-start; /* Align content to the left */
    margin-top: 50px; /* Add some spacing between image and paragraph */
    margin-left: 20px;
+         margin-bottom: 20px; 
+
 } 
 
 
