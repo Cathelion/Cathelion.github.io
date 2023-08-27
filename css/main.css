@@ -95,7 +95,17 @@ li.right{
 }
 
 
-.img-container {
+.img-container1 {
+   width: 65%;
+   flex: 1; /* Expand to fill available space */
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Align content to the left */
+   margin-top: 20px; /* Add some spacing between image and paragraph */
+}
+
+.img-container2 {
+   width: 35%;
    flex: 1; /* Expand to fill available space */
    display: flex;
    flex-direction: column;
