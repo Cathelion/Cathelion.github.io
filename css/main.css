@@ -113,7 +113,7 @@ li.right{
    flex: 1; /* Expand to fill available space */
    display: flex;
    flex-direction: column;
-   align-items: flex-start; /* Align content to the left */
+  align-items: center;
    margin-top: 50px; /* Add some spacing between image and paragraph */
    margin-left: 20px;
          margin-bottom: 20px; 
