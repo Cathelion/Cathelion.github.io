@@ -12,7 +12,7 @@ body {
    font-size: 1.5em;
    width: 50%;
    min-height: 100vh; /* Make the wrapper stretch from top to bottom */
-   background-color: hsl(50 33% 25% / 0.35);
+   background-color: hsl(50 33% 25% / 0.25);
    padding: 20px;
    display: flex;
    flex-direction: column; /* Stack navigation, content, and footer vertically */
